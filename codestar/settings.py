@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-robertdivko-preprojectb-e3m6tuf1hkb.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-robertdivko-preprojectb-dw1ac6f1rrj.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_summernote',
     'blog',
 ]
 
