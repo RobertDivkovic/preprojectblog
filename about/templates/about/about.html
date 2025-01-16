@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
-{% block content %}
 {% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
 
 <div class="container mt-5">
   <div class="row">
@@ -9,7 +11,7 @@
     </div>
     <div class="col-8">
       <!-- Title goes between these h2 tags -->
-      <h2>Testiram pravilitet headera</h2>
+      <h2>Let's collaborate!</h2>
       <!-- Content goes directly underneath this -->
       <p>To be, or not to be: that is the question: whether 'tis nobler in the mind to suffer the slings and arrows of
         outrageous fortune, or to take arms against a sea of troubles, and by opposing end them? To die: to sleep; no
@@ -30,6 +32,11 @@
     <div class="col text-right">
       <!-- Updated on field goes in here -->
       <p class="text-end"><em>Updated on: Oct. 20. at 20.20. a.m.</em></p>
+      <form method="post">
+        {{ collaborate_form | crispy }}
+        {% csrf_token %}
+        <button class="btn btn-secondary" type="submit">Submit</button>
+      </form>
     </div>
   </div>
 </div>
